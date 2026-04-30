@@ -14,19 +14,25 @@
 JP（本文）、Inter（英語）
 
 ## デザイン方針
-- トーン: 静かで誠実、落ち着いた品格
-- 事業の姿勢「否定しない。押し付けない。一緒に整える。」を体現するデザイン
+- トーン: 清潔・信頼・モダン。50代に安心感を与えつつ新鮮さも感じるデザイン
 - 配色:
-  - プライマリ: #1e3a5f（深い紺）
-  - セカンダリ: #2c5282（ブルー）
-  - アクセント: #c77d3c（温かみのあるゴールドブラウン）
-  - 背景: #faf9f7（温かみのあるオフホワイト）
-  - テキスト: #2d3748（ダークグレー）
-  - サブテキスト: #718096（ミディアムグレー）
-- 余白を十分に取り、情報密度を低く保つ
-- 装飾を控えめに、言葉の力で伝えるデザイン
-- 見出しは Noto Serif JP で品格を出す
-- アニメーションは控えめなフェードイン程度
+  - Primary: #0099A8（ティール）
+  - Primary Gradient: linear-gradient(135deg, #0099A8, #00C9A7)
+  - Accent: #F5911E（オレンジ）
+  - Accent Gradient: linear-gradient(135deg, #F5911E, #F7A84B)
+  - Background: #ffffff（白）
+  - Background Light: #f7fafa / #f4fbfc
+  - Background Warm: #fffbf5 / #fffaf5
+  - Text: #1a1a1a（見出し）/ #333（本文）/ #666（サブ）/ #888（補足）
+  - Border: #eee / #f0f0f0
+- 余白: たっぷり（セクション間 100px、要素間 24-48px）
+- フォント: Noto Serif JP（見出し）, Noto Sans JP（本文）, Inter（英数字・数値）
+- アニメーション: Intersection Observer による控えめなフェードイン（duration 0.8s, translateY 30px）
+- 角丸: 16-20px（カード）、10px（ボタン）、100px（バッジ）
+- 影: box-shadow: 0 2px 16px rgba(0,0,0,0.04)（通常）、0 12px 40px rgba(0,0,0,0.08)（ホバー）
+- グラデーション装飾: 背景に円形のradial-gradient、ドットパターン、リングを控えめに配置
+- ナビCTA: オレンジグラデーション
+- セクションラベル: 英字大文字、ティール色、前後に線付き
 
 ## ページ構成
 1. index.html — トップページ（LP構造のハイブリッド型）
