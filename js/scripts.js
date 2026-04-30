@@ -118,3 +118,23 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
 }());
+
+/* ---------- Blog Category Filter ---------- */
+(function () {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards      = document.querySelectorAll('.blog-card[data-category]');
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+
+      const cat = btn.dataset.filter;
+      cards.forEach(function (card) {
+        const show = cat === 'all' || card.dataset.category === cat;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+}());
