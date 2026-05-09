@@ -401,11 +401,35 @@ button {
 
 .hero-inner {
   display: flex;
-  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 56px;
 }
 
 .hero-content {
-  max-width: 680px;
+  flex: 52 1 0%;
+  min-width: 0;
+}
+
+.hero-image {
+  display: none;
+  flex: 48 1 0%;
+  min-width: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    display: block;
+    margin-top: 0;
+    padding-top: 30px;
+  }
 }
 
 .hero-eyebrow {
@@ -436,7 +460,14 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
+}
+
+.hero-note {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 28px;
 }
 
 .badge {
