@@ -2714,3 +2714,57 @@ button {
   color: var(--color-accent);
   opacity: 1;
 }
+
+/* ========== Visually Hidden (SEO用非表示見出し) ========== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ========== Empathy Label (場面別キーワード見出し) ========== */
+.empathy-label {
+  font-size: 0.85em;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-top: 16px;
+  letter-spacing: 0.02em;
+}
+
+/* ========== CTA Mid ========== */
+.cta-mid-wrap {
+  text-align: center;
+  padding: 48px 24px;
+  background: #f9f7f4;
+}
+
+.cta-mid-wrap .btn {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.cta-sub-note {
+  font-size: 0.88em;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* ========== CTA Bottom ========== */
+.cta-bottom-wrap {
+  text-align: center;
+  padding: 56px 24px;
+  background: #f0ede8;
+}
+
+.cta-bottom-lead {
+  font-size: 1.05em;
+  margin-bottom: 20px;
+  color: #444;
+}
