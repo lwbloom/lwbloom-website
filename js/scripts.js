@@ -119,6 +119,50 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 }());
 
+/* ---------- GA4 Conversion Events ---------- */
+(function () {
+  function sendEvent(name, params) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', name, params);
+  }
+
+  // LINE ボタンクリック → line_click
+  // 無料セッション申込フォームリンク → session_request
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+
+    if (href.indexOf('line.me') !== -1) {
+      sendEvent('qualify_lead', {
+        method: 'line',
+        event_category: 'conversion',
+        event_label: link.textContent.trim().slice(0, 50),
+        page_location: window.location.href
+      });
+    } else if (href.indexOf('forms.gle/2vtvnC5zq1N5pTdb9') !== -1) {
+      sendEvent('qualify_lead', {
+        method: 'google_form',
+        event_category: 'conversion',
+        event_label: link.textContent.trim().slice(0, 50),
+        page_location: window.location.href
+      });
+    }
+  });
+
+  // コンタクトフォーム送信（formspree）→ qualify_lead
+  var contactForm = document.querySelector('form[action*="formspree"]');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function () {
+      sendEvent('qualify_lead', {
+        method: 'contact_form',
+        event_category: 'conversion',
+        page_location: window.location.href
+      });
+    });
+  }
+}());
+
 /* ---------- Blog Category Filter ---------- */
 (function () {
   const filterBtns = document.querySelectorAll('.filter-btn');
