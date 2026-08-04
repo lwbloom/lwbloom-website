@@ -2594,6 +2594,18 @@ button {
   margin: 48px auto 0;
 }
 
+.vmvp-note-link {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.vmvp-note-link a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
 /* ---------- Service CTA Wrap ---------- */
 .service-cta-wrap {
   margin-top: 20px;
