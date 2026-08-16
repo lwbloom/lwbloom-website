@@ -470,6 +470,22 @@ button {
   margin-bottom: 28px;
 }
 
+.hero-about-link {
+  display: inline-block;
+  margin-top: 16px;
+  margin-left: 16px;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.hero-about-link:hover,
+.hero-about-link:focus-visible {
+  border-color: var(--color-primary);
+}
+
 .badge {
   display: inline-block;
   font-family: var(--font-inter);
